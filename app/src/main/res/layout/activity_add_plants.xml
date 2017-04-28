@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_add_plants"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.prashantpandey.nurseryapp.AddPlants">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+    <ImageButton
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:src="@mipmap/ic_add_a_photo_white_48dp"
+        android:id="@+id/activity_add_plants_imageButton"/>
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/activity_add_plants_imageButton"
+                android:id="@+id/activity_add_plants_categoryRadio"
+                android:layout_marginLeft="10dp">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Herb"
+                android:id="@+id/activity_add_plants_categoryHerb"
+                android:padding="10dp"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Shrub"
+                    android:padding="10dp"
+                    android:id="@+id/activity_add_plants_categoryShrub"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Flowering/Seasonal"
+                    android:padding="10dp"
+                    android:id="@+id/activity_add_plants_categoryFlowering"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tree"
+                    android:padding="10dp"
+                    android:id="@+id/activity_add_plants_categoryTree"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Palm"
+                    android:padding="10dp"
+                    android:id="@+id/activity_add_plants_categoryPalm"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fruit"
+                    android:padding="10dp"
+                    android:id="@+id/activity_add_plants_categoryFruit"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Grass"
+                    android:padding="10dp"
+                    android:id="@+id/activity_add_plants_categoryGrass"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bonsai"
+                    android:padding="10dp"
+                    android:id="@+id/activity_add_plants_categoryBonsai"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ornamental"
+                    android:padding="10dp"
+                    android:id="@+id/activity_add_plants_categoryOrnamental"/>
+
+            </RadioGroup>
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="CommonName"
+            android:layout_below="@id/activity_add_plants_categoryRadio"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/activity_add_plants_commonNameText"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Scientific Name"
+            android:padding="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@id/activity_add_plants_commonNameText"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+
+            android:id="@+id/activity_add_plants_scientificNameText"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Description"
+                android:padding="10dp"
+                android:layout_below="@id/activity_add_plants_scientificNameText"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:textStyle="bold"
+                android:id="@+id/activity_add_plants_descriptionText"/>
+
+
+
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/activity_add_plants_descriptionText"
+                    android:text="Size Small"
+                    android:padding="10dp"
+                    android:id="@+id/activity_add_plants_sizeSmallCheckBox"/>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/activity_add_plants_descriptionText"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="10dp"
+                    android:hint="Price Small"
+                    android:padding="10dp"
+                    android:id="@+id/activity_add_plants_priceSmall"
+                    android:textStyle="bold"
+                    android:layout_toEndOf="@id/activity_add_plants_sizeSmallCheckBox"
+                    android:inputType="number"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Size Medium"
+                    android:padding="10dp"
+                    android:layout_below="@id/activity_add_plants_sizeSmallCheckBox"
+                    android:id="@+id/activity_add_plants_sizeMediumCheckBox"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Price Medium"
+                android:layout_below="@id/activity_add_plants_sizeSmallCheckBox"
+                android:layout_toEndOf="@id/activity_add_plants_sizeMediumCheckBox"
+                android:padding="10dp"
+                android:id="@+id/activity_add_plants_priceMedium"
+                android:textStyle="bold"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="10dp"
+                android:inputType="number"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Size Large"
+                android:padding="10dp"
+                android:layout_below="@id/activity_add_plants_sizeMediumCheckBox"
+                android:id="@+id/activity_add_plants_sizeLargeCheckbox"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Price Large"
+                android:layout_below="@id/activity_add_plants_sizeMediumCheckBox"
+                android:layout_toEndOf="@id/activity_add_plants_sizeLargeCheckbox"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:id="@+id/activity_add_plants_priceLarge"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="10dp"
+                android:inputType="number"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="X Large"
+                android:padding="10dp"
+                android:layout_below="@id/activity_add_plants_sizeLargeCheckbox"
+                android:id="@+id/activity_add_plants_sizeXLargeCheckBox"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/activity_add_plants_sizeLargeCheckbox"
+                android:layout_toEndOf="@id/activity_add_plants_sizeXLargeCheckBox"
+                android:hint="Price X Large"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="10dp"
+                android:inputType="number"
+                android:textStyle="bold"
+                android:id="@+id/activity_add_plants_pirceXLarge"/>
+            android:inputType="number"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="XX Large"
+                android:padding="10dp"
+                android:layout_below="@id/activity_add_plants_sizeXLargeCheckBox"
+                android:id="@+id/activity_add_plants_sizeXXLargeCheckBox"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/activity_add_plants_sizeXLargeCheckBox"
+                android:layout_toEndOf="@id/activity_add_plants_sizeXLargeCheckBox"
+                android:hint="Price XX Large"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="10dp"
+                android:inputType="number"
+                android:textStyle="bold"
+                android:id="@+id/activity_add_plants_priceXXLarge"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/activity_add_plants_sizeXXLargeCheckBox"
+                android:layout_marginTop="20dp"
+                android:text="Add Plant to Database"
+                android:id="@+id/activity_add_plants_addPlantButton"/>
+
+
+
+
+
+        </RelativeLayout>
+
+
+
+
+    </ScrollView>
+
+
+
+
+</RelativeLayout>

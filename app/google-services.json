@@ -1,0 +1,99 @@
+{
+  "project_info": {
+    "project_number": "844134456266",
+    "firebase_url": "https://nurseryapp-95018.firebaseio.com",
+    "project_id": "nurseryapp-95018",
+    "storage_bucket": "nurseryapp-95018.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:844134456266:android:893274975c6990fb",
+        "android_client_info": {
+          "package_name": "com.prashantpandey.nurseryapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "844134456266-fk7mm5id21g0kudfa468o5fhcacqtthg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.prashantpandey.nurseryapp",
+            "certificate_hash": "31D0C9014B5C4ABDE9F445BC2E223DB390F648E7"
+          }
+        },
+        {
+          "client_id": "844134456266-1jk3jde9vu7m8ujh03iidk4r29qelfd1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCG_fKdC47dkfKCTp9IQ5BM2LaZ-ZN8_VQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "844134456266-1jk3jde9vu7m8ujh03iidk4r29qelfd1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:844134456266:android:8f392032dcd3a604",
+        "android_client_info": {
+          "package_name": "com.prashantpandey.nurseryapp.vendors"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "844134456266-gkc2li6nfhjrji978ohv9cgvmgd9adka.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.prashantpandey.nurseryapp.vendors",
+            "certificate_hash": "31D0C9014B5C4ABDE9F445BC2E223DB390F648E7"
+          }
+        },
+        {
+          "client_id": "844134456266-1jk3jde9vu7m8ujh03iidk4r29qelfd1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCG_fKdC47dkfKCTp9IQ5BM2LaZ-ZN8_VQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "844134456266-1jk3jde9vu7m8ujh03iidk4r29qelfd1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+
+    android:hapticFeedbackEnabled="true"
+    android:background="?android:selectableItemBackground"
+    android:clickable="true"  >
+
+   <ImageView
+       android:layout_height="135dp"
+       android:layout_width="100dp"
+       android:id="@+id/view_postImage"
+       android:padding="5dp"
+       android:src="@mipmap/ic_launcher"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="CommonName"
+        android:shadowColor="@color/authui_colorPrimary"
+        android:textColor="#000"
+        android:typeface="serif"
+        android:layout_toEndOf="@id/view_postImage"
+        android:layout_marginTop="5dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:id="@+id/view_CommonName"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ScientificName"
+        android:layout_toEndOf="@id/view_postImage"
+        android:layout_below="@id/view_CommonName"
+        android:layout_marginTop="5dp"
+        android:padding="5dp"
+        android:textSize="13sp"
+        android:typeface="serif"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:layout_alignEnd="@id/view_CommonName"
+        android:id="@+id/view_scientificName"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/view_postImage"
+        android:text="Price"
+        android:typeface="serif"
+        android:textStyle="bold"
+        android:layout_below="@id/view_scientificName"
+        android:textSize="13sp"
+        android:padding="5dp"
+        android:textColor="#000"
+        android:id="@+id/view_Price"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_Price"
+        android:layout_toEndOf="@id/view_postImage"
+        android:text="Category:"
+        android:padding="5dp"
+        android:typeface="serif"
+        android:textStyle="bold"
+        android:textSize="13sp"
+        android:textColor="#000"
+        android:id="@+id/view_Category"/>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/view_Category"
+        android:background="#78000000" />
+
+
+</RelativeLayout>

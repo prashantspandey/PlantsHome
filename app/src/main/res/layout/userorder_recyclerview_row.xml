@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:padding="5dp"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="Name:"
+        android:id="@+id/user_order_nameView"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Address"
+        android:padding="5dp"
+        android:id="@+id/user_order_addressView"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Time"
+        android:padding="5dp"
+        android:id="@+id/user_order_timeView"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Order"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/user_order_orViewView"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total:"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:id="@+id/user_order_amountView"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Confirmation Status:"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/user_order_confirmationView"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Delivery Status:"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/user_order_deliverView"/>
+
+</LinearLayout>

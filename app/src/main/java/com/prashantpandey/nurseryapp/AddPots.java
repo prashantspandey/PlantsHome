@@ -1,0 +1,227 @@
+package com.prashantpandey.nurseryapp;
+
+import android.app.ProgressDialog;
+
+import android.net.Uri;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.RadioButton;
+
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
+
+
+import java.io.File;
+
+
+import id.zelory.compressor.Compressor;
+
+public class AddPots extends AppCompatActivity implements View.OnClickListener {
+
+    private ImageButton potImage;
+    private RadioButton earthenPot, cementPot, plasticPot;
+    private CheckBox sixInchBox, eightInchBox, nineInchBox, tenInchBox, twelveInchBox, fourteenInchBox, sixteenInchBox, eithteenInchBox;
+    private CheckBox twentyInchBox;
+    private EditText sixPrice, eightPrice, ninePrice, tenPrice, twelvePrice, fourteenPrice, sixteenPrice, eighteenPrice, twentyPrice;
+    private Button potToDatabase;
+    private Uri imageUri,downloadUri;
+    private File imageFile;
+
+    private ProgressDialog progressDialog;
+    private StorageReference pStorage, potpicture;
+    private DatabaseReference potReference,postPotReference;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_add_pots);
+
+        potReference = FirebaseDatabase.getInstance().getReference().child("Pots");
+        postPotReference = potReference.push();
+        pStorage = FirebaseStorage.getInstance().getReference();
+        potImage = (ImageButton) findViewById(R.id.activity_add_pots_imageButton);
+        earthenPot = (RadioButton) findViewById(R.id.activity_add_pots_earthenRadio);
+        cementPot = (RadioButton) findViewById(R.id.activity_add_pots_cementRadio);
+        plasticPot = (RadioButton) findViewById(R.id.activity_add_pots_plasticRadio);
+        sixInchBox = (CheckBox) findViewById(R.id.activity_add_pots_6inchCheck);
+        eightInchBox = (CheckBox) findViewById(R.id.activity_add_pots_8inchCheck);
+        nineInchBox = (CheckBox) findViewById(R.id.activity_add_pots_9inchCheck);
+        tenInchBox = (CheckBox) findViewById(R.id.activity_add_pots_10inchCheck);
+        twelveInchBox = (CheckBox) findViewById(R.id.activity_add_pots_12inchCheck);
+        fourteenInchBox = (CheckBox) findViewById(R.id.activity_add_pots_14inchCheck);
+        sixteenInchBox = (CheckBox) findViewById(R.id.activity_add_pots_16inchCheck);
+        eithteenInchBox = (CheckBox) findViewById(R.id.activity_add_pots_18inchCheck);
+        twentyInchBox = (CheckBox) findViewById(R.id.activity_add_pots_20inchCheck);
+        sixPrice = (EditText) findViewById(R.id.activity_add_pots_6inchPrice);
+        eightPrice = (EditText) findViewById(R.id.activity_add_pots_8inchPrice);
+        ninePrice = (EditText) findViewById(R.id.activity_add_pots_9inchPrice);
+        tenPrice = (EditText) findViewById(R.id.activity_add_pots_10inchPrice);
+        twelvePrice = (EditText) findViewById(R.id.activity_add_pots_12inchPrice);
+        fourteenPrice = (EditText) findViewById(R.id.activity_add_pots_14inchPrice);
+        sixteenPrice = (EditText) findViewById(R.id.activity_add_pots_16inchPrice);
+        eighteenPrice = (EditText) findViewById(R.id.activity_add_pots_18inchPrice);
+        twentyPrice = (EditText) findViewById(R.id.activity_add_pots_20inchPrice);
+        potToDatabase = (Button) findViewById(R.id.activity_add_pots_addtodatabase);
+
+        potImage.setOnClickListener(this);
+        progressDialog = new ProgressDialog(this);
+        imageFile = new File(getExternalCacheDir(), "teimg.jpg");
+
+        sixInchBox.setOnClickListener(this);
+        eightInchBox.setOnClickListener(this);
+        nineInchBox.setOnClickListener(this);
+        tenInchBox.setOnClickListener(this);
+        twelveInchBox.setOnClickListener(this);
+        fourteenInchBox.setOnClickListener(this);
+        sixteenInchBox.setOnClickListener(this);
+        eithteenInchBox.setOnClickListener(this);
+        twentyInchBox.setOnClickListener(this);
+
+        potToDatabase.setOnClickListener(this);
+
+    }
+
+    @Override
+    public void onClick(View v) {
+        int id = v.getId();
+        if (id == R.id.activity_add_pots_imageButton) {
+
+        }
+        if (id == R.id.activity_add_pots_6inchCheck){
+            if (sixInchBox.isChecked()){
+                sixPrice.setVisibility(View.VISIBLE);
+            }else{
+                sixPrice.setVisibility(View.GONE);
+                sixPrice.setText("");
+            }
+        }
+        if (id == R.id.activity_add_pots_8inchCheck){
+            if (eightInchBox.isChecked()){
+                eightPrice.setVisibility(View.VISIBLE);
+            }else{
+                eightPrice.setVisibility(View.GONE);
+                eightPrice.setText("");
+            }
+        }
+        if (id == R.id.activity_add_pots_9inchCheck){
+            if (nineInchBox.isChecked()){
+                ninePrice.setVisibility(View.VISIBLE);
+            }else{
+                ninePrice.setVisibility(View.GONE);
+                ninePrice.setText("");
+            }
+        }
+        if (id == R.id.activity_add_pots_10inchCheck){
+            if (tenInchBox.isChecked()){
+                tenPrice.setVisibility(View.VISIBLE);
+            }else{
+                tenPrice.setVisibility(View.GONE);
+                tenPrice.setText("");
+            }
+        }
+        if (id == R.id.activity_add_pots_12inchCheck){
+            if (twelveInchBox.isChecked()){
+                twelvePrice.setVisibility(View.VISIBLE);
+            }else{
+                twelvePrice.setVisibility(View.GONE);
+                twelvePrice.setText("");
+            }
+        }
+        if (id == R.id.activity_add_pots_14inchCheck){
+            if (fourteenInchBox.isChecked()){
+                fourteenPrice.setVisibility(View.VISIBLE);
+            }else{
+                fourteenPrice.setVisibility(View.GONE);
+                fourteenPrice.setText("");
+            }
+        }
+        if (id == R.id.activity_add_pots_16inchCheck){
+            if (sixteenInchBox.isChecked()){
+                sixteenPrice.setVisibility(View.VISIBLE);
+            }else{
+                sixteenPrice.setVisibility(View.GONE);
+                sixteenPrice.setText("");
+            }
+        }
+        if (id == R.id.activity_add_pots_18inchCheck){
+            if (eithteenInchBox.isChecked()){
+                eighteenPrice.setVisibility(View.VISIBLE);
+            }else{
+                eighteenPrice.setVisibility(View.GONE);
+                eighteenPrice.setText("");
+            }
+        }
+        if (id == R.id.activity_add_pots_20inchCheck){
+            if (twentyInchBox.isChecked()){
+                twentyPrice.setVisibility(View.VISIBLE);
+            }else{
+                twentyPrice.setVisibility(View.GONE);
+                twentyPrice.setText("");
+            }
+        }
+        if (id == R.id.activity_add_pots_addtodatabase){
+            final String sixp = sixPrice.getText().toString();
+            final String eightp = eightPrice.getText().toString();
+            final String ninep = ninePrice.getText().toString();
+            final String tenp = tenPrice.getText().toString();
+            final String twelvep = twelvePrice.getText().toString();
+            final String fourteenp = fourteenPrice.getText().toString();
+            final String sixteenp = sixteenPrice.getText().toString();
+            final String eighteenp = eighteenPrice.getText().toString();
+            final String twentyp = twentyPrice.getText().toString();
+
+            final String ty = findType();
+            progressDialog.setMessage("Adding " + ty + "to database.");
+            progressDialog.show();
+
+            if (imageFile!=null){
+                File compressedFile = Compressor.getDefault(this).compressToFile(imageFile);
+                Uri imageuri = Uri.fromFile(compressedFile);
+                potpicture = pStorage.child("Pot_Pictures").child(imageuri.getLastPathSegment());
+                potpicture.putFile(imageuri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                    @Override
+                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                        downloadUri = taskSnapshot.getDownloadUrl();
+                        IdealPot newPot = new IdealPot(null,ty,sixp,eightp,ninep,tenp,twelvep,fourteenp,sixteenp,eighteenp,twentyp,null);
+                        postPotReference.setValue(newPot);
+                        progressDialog.dismiss();
+                    }
+                });
+            }
+
+
+        }
+    }
+
+
+
+
+    public String findType(){
+        String type;
+        if (earthenPot.isChecked()){
+            type = "Earthen";
+            return  type;
+        }
+        if (cementPot.isChecked()){
+            type = "Cement";
+            return type;
+        }
+        if (plasticPot.isChecked()){
+            type = "Plastic";
+            return type;
+        }
+        return null;
+    }
+
+}
+

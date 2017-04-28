@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android ="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_help"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.prashantpandey.nurseryapp.HelpActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Our Policies:"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="1.Your orders will be delivered to you within 48 hours.\n\n2. We currently only take orders in Jaipur city.\n\n3. We  currently accept three kinds of payments,ie. Paytm on delivery,Debit card on delivery and cash on delivery.\n\n4. We only take orders more than Rs. 199.\n\n5. Orders between Rs. 199 and Rs. 999 will incur 10% delivery charge.\n\n6. Orders over Rs. 999 will be delivered to you free of charge.\n\n7. We don't have return policy on plants."
+        android:textColor="#FFFFFF"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text=" Navigating the App "/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="#FFF"
+        android:text=" 1. Click on any item to view it's full description.\n\n2. Long pressing the photo will bring up the larger preview of the photo.\n\n3. To add an item to cart, first select the size of plant,adjust the quantity and click on either add to cart button on the toolbar or choose add to basket button at the bottom of the page. \n\n4. Click on any item in the basket to delete it from the cart or to change the quantity of the item. \n\n 5. Make sure order is over Rs. 499 and click on check out, if you haven't already updated your personal details then you will be taken to your personal details page where you can input your delivery address and phone number. Once done, the app will show you your total amount, order, and address , Now you can click on buy button to order you plants. Enjoy !!\n\n6. You can keep track of your orders in My Orders page.\n \t\t\t\t\t\t App Made by : Prashant Pandey"/>
+        </LinearLayout>
+    </ScrollView>
+    </LinearLayout>
+
+

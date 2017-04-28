@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:layout_marginBottom="10dp"
+    android:background="?android:selectableItemBackground"
+    android:clickable="true">
+
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/row_cart_plantImage"
+        android:src="@mipmap/ic_launcher"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:layout_toEndOf="@id/row_cart_plantImage"
+        android:padding="5dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:id="@+id/row_cart_plantCommonName"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Size"
+        android:layout_toEndOf="@id/row_cart_plantImage"
+        android:layout_below="@id/row_cart_plantCommonName"
+        android:padding="5dp"
+        android:id="@+id/row_cart_size"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Price"
+        android:layout_toEndOf="@id/row_cart_plantImage"
+        android:layout_below="@id/row_cart_size"
+        android:padding="5dp"
+        android:id="@+id/row_cart_plantPrice"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quantity"
+        android:layout_toEndOf="@id/row_cart_plantImage"
+        android:layout_below="@id/row_cart_plantPrice"
+        android:padding="5dp"
+        android:id="@+id/row_cart_plantQuantity"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total"
+        android:layout_toEndOf="@id/row_cart_plantImage"
+        android:layout_below="@id/row_cart_plantQuantity"
+        android:padding="5dp"
+        android:id="@+id/row_cart_plantTotalPrice"/>
+
+</RelativeLayout>

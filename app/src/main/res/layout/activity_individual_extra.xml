@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_individual_extra"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.prashantpandey.nurseryapp.IndividualExtraActivity">
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1B5E20"
+        android:layout_marginBottom="15dp"
+        android:id="@+id/activity_extra_toolbar"/>
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/activity_extra_toolbar">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/activity_individual_extra_imageView"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CommonName"
+                android:textSize="25sp"
+                android:padding="10dp"
+                android:layout_below="@id/activity_individual_extra_imageView"
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:id="@+id/activity_individual_extra_commonNameView"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Type:"
+                android:padding="10dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:id="@+id/activity_individual_extra_typeView"
+                android:layout_below="@id/activity_individual_extra_commonNameView"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Price:"
+                android:padding="10dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_below="@id/activity_individual_extra_typeView"
+                android:layout_marginTop="10dp"
+                android:id="@+id/activity_individual_extra_priceView"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Size"
+                android:layout_below="@id/activity_individual_extra_priceView"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:padding="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/activity_individual_extra_sizeView"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quantity"
+                android:layout_below="@id/activity_individual_extra_sizeView"
+                android:padding="10dp"
+                android:textSize="15sp"
+                android:id="@+id/activity_individual_extra_quantityLable"/>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_keyboard_arrow_left_white_24dp"
+                android:layout_below="@id/activity_individual_extra_sizeView"
+                android:layout_toEndOf="@id/activity_individual_extra_quantityLable"
+                android:layout_marginStart="10sp"
+                android:id="@+id/activity_individual_extra_decreaseButton"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:layout_below="@id/activity_individual_extra_sizeView"
+                android:layout_toEndOf="@id/activity_individual_extra_decreaseButton"
+                android:padding="10dp"
+                android:id="@+id/activity_individual_extra_quantityText"
+                android:layout_marginTop="3dp"/>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_keyboard_arrow_right_white_24dp"
+                android:layout_below="@id/activity_individual_extra_sizeView"
+                android:layout_toEndOf="@id/activity_individual_extra_quantityText"
+                android:id="@+id/activity_individual_extra_increaseButton"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/activity_individual_extra_quantityLable"
+                android:text="Description"
+                android:layout_marginTop="20dp"
+                android:padding="10dp"
+                android:textSize="17sp"
+                android:id="@+id/activity_individual_extra_descriptionView"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add to Basket"
+                android:layout_below="@id/activity_individual_extra_descriptionView"
+                android:layout_marginTop="15dp"
+                android:padding="5dp"
+                android:id="@+id/activity_individual_extra_addToCartButton"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+
+    </ScrollView>
+
+</RelativeLayout>

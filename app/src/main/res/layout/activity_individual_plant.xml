@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_individual_plant"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:background="@drawable/plback"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.prashantpandey.nurseryapp.IndividualPlantActivity">
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/activity_individual_toolbar"
+
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:background="#1B5E20"
+        android:layout_marginBottom="15dp"/>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/activity_individual_toolbar">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_below="@id/activity_individual_toolbar"
+        android:padding="5dp">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="300dp"
+        android:minHeight="300dp"
+
+        android:id="@+id/activity_individual_plantImage"
+        android:background="@mipmap/ic_update_white_24dp"
+
+
+        android:padding="5dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/activity_individual_plantImage"
+        android:layout_marginTop="10dp"
+        android:text="CommonName"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:padding="10dp"
+        android:id="@+id/activity_individual_plantCommonName"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       android:layout_marginTop="10dp"
+        android:text="ScientificName"
+        android:layout_below="@id/activity_individual_plantCommonName"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:id="@+id/activity_individual_plantScientificName"/>
+
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/activity_individual_plantScientificName"
+            android:orientation="vertical"
+            android:id="@+id/activity_individual_radioGroup"
+            android:padding="10dp"
+            android:layout_marginTop="10dp">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="#fff"
+                android:text="0-1.5 feet"
+                android:id="@+id/activity_individual_sizeSmallRadio"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1.5-3 feet"
+                android:buttonTint="#fff"
+                android:id="@+id/activity_individual_sizeMediumRadio"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3-5 feet"
+                android:buttonTint="#fff"
+                android:id="@+id/activity_individual_sizeLaRadioRadio"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5-8 feet"
+                android:buttonTint="#fff"
+                android:id="@+id/activity_individual_sizeXlargeRadioButton"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8-10 feet"
+                android:buttonTint="#fff"
+                android:id="@+id/activity_individual_sizeXXlargeRadioButton"/>
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ohter"
+                android:buttonTint="#fff"
+                android:visibility="gone"
+                android:id="@+id/activity_individual_sizeOther"/>
+
+        </RadioGroup>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price: Please select one of the sizes to see price."
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:id="@+id/activity_individual_priceText"
+            android:layout_below="@+id/activity_individual_radioGroup"
+            android:layout_alignParentStart="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/activity_individual_priceText"
+            android:text="Category"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:textSize="16sp"
+            android:id="@+id/activity_individual_plantCategory"/>
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quantity"
+        android:layout_below="@id/activity_individual_plantCategory"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/activity_individual_plantQuantitylable"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/activity_individual_plantQuantitylable"
+        android:text="1"
+        android:layout_below="@id/activity_individual_plantCategory"
+        android:padding="10dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/activity_individual_plantQuantityText"
+        />
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_keyboard_arrow_left_white_24dp"
+        android:layout_marginTop="15dp"
+        android:layout_toEndOf="@id/activity_individual_plantQuantitylable"
+        android:layout_below="@id/activity_individual_plantCategory"
+        android:id="@+id/activity_individual_plantdownQuantitybutton"/>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_keyboard_arrow_right_white_24dp"
+            android:id="@+id/activity_individual_plantupQuantitybutton"
+            android:layout_marginTop="15dp"
+            android:layout_toEndOf="@id/activity_individual_plantQuantityText"
+            android:layout_below="@id/activity_individual_plantCategory"/>
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/activity_individual_descriptionText"
+            android:layout_marginTop="32dp"
+            android:text="Description:"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:textSize="17sp"
+            android:layout_below="@+id/activity_individual_plantQuantitylable"
+            android:layout_alignParentStart="true" />
+
+        <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/activity_individual_descriptionText"
+        android:text="Add To Basket"
+        android:padding="10dp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/activity_individual_plantAddtobasketbutton"/>
+
+
+
+
+    </RelativeLayout>
+
+</ScrollView>
+</RelativeLayout>

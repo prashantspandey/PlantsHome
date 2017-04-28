@@ -16,13 +16,13 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="#AED581">
+    android:background="@drawable/mbg">
 
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/main_toolbar"
-        android:background="#1B5E20"
+        android:background="#4e9101"
 
         app:titleTextAppearance="@style/maintoptoolbarstyle"
 
@@ -34,13 +34,16 @@
         android:layout_below="@id/main_toolbar"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="10dp"
-        android:background="#1B5E20"
+        android:background="#4e9101"
         app:titleTextAppearance="@style/mainspintoolbarstyle"
         >
         <Spinner
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/category_spinner"
+            android:popupBackground="#c9da7d"
+            android:elevation="10dp"
+            android:contentDescription="Choose a Category"
             android:scrollbarStyle="outsideOverlay"
             android:scrollbarFadeDuration="5000">
 
@@ -55,6 +58,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/activity_main_card"
 
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardElevation="5dp"
         android:layout_below="@id/category_toolbar">
 <FrameLayout
     android:layout_width="match_parent"
@@ -101,6 +106,7 @@
     <android.support.design.widget.NavigationView
         android:layout_width="300dp"
         android:layout_height="match_parent"
+        android:background="#ecd5a7"
         android:layout_gravity="start"
         android:id="@+id/nav_view">
 
@@ -126,63 +132,86 @@
             android:text="All Plants"
             android:gravity="center"
             android:layout_marginTop="10dp"
-
+            android:textColor="#0c3c00"
+            android:shadowColor="@color/text_shadow"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2"
             android:id="@+id/navigation_drawer_allplantsButton"
+            android:textColorHighlight="@color/cardview_shadow_start_color"
 
             android:elevation="6dp"
             android:textAppearance="@android:style/TextAppearance.WindowTitle" />
         <View
             android:layout_width="fill_parent"
             android:layout_height="1dp"
-            android:background="#ffffff" />
+            android:background="#0c3c00" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:text="Pots"
             android:elevation="6dp"
             android:gravity="center"
+            android:shadowColor="@color/text_shadow"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2"
             android:layout_marginTop="10dp"
-
+            android:textColor="#0c3c00"
             android:id="@+id/navigation_drawer_potsButton"
             android:textAppearance="@android:style/TextAppearance.WindowTitle"
              />
         <View
             android:layout_width="fill_parent"
             android:layout_height="1dp"
-            android:background="#ffffff" />
+            android:background="#0c3c00" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:text="Decorative Items/Fertilizers"
             android:id="@+id/navigation_drawer_fertilizerButton"
             android:layout_marginTop="10dp"
+            android:shadowColor="@color/text_shadow"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2"
             android:gravity="center_horizontal"
             android:elevation="6dp"
+            android:textColor="#0c3c00"
             android:textAppearance="@android:style/TextAppearance.WindowTitle"/>
         <View
             android:layout_width="fill_parent"
             android:layout_height="1dp"
-            android:background="#ffffff" />
+            android:background="#0c3c00" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:text="Personal Details"
+            android:shadowColor="@color/text_shadow"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2"
             android:layout_marginTop="10dp"
             android:id="@+id/navigation_drawer_profileButton"
             android:gravity="center_horizontal"
             android:elevation="6dp"
+            android:textColor="#0c3c00"
             android:textAppearance="@android:style/TextAppearance.WindowTitle"/>
         <View
             android:layout_width="fill_parent"
             android:layout_height="1dp"
-            android:background="#ffffff" />
+            android:background="#0c3c00" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:text="My Cart"
             android:layout_marginTop="10dp"
-
+            android:textColor="#0c3c00"
+            android:shadowColor="@color/text_shadow"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2"
             android:id="@+id/navigation_drawer_cartButton"
             android:gravity="center_horizontal"
             android:elevation="6dp"
@@ -190,12 +219,17 @@
         <View
             android:layout_width="fill_parent"
             android:layout_height="1dp"
-            android:background="#ffffff" />
+            android:background="#0c3c00" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:text="My Orders"
             android:layout_marginTop="10dp"
+            android:textColor="#0c3c00"
+            android:shadowColor="@color/text_shadow"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2"
             android:id="@+id/navigation_drawer_orderButton"
             android:gravity="center_horizontal"
             android:elevation="6dp"
@@ -203,12 +237,17 @@
         <View
             android:layout_width="fill_parent"
             android:layout_height="1dp"
-            android:background="#ffffff" />
+            android:background="#0c3c00" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:text="Help"
+            android:textColor="#0c3c00"
             android:layout_marginTop="10dp"
+            android:shadowColor="@color/text_shadow"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2"
             android:gravity="center_horizontal"
             android:id="@+id/navigation_drawer_helpButton"
             android:elevation="6dp"
@@ -216,7 +255,7 @@
         <View
             android:layout_width="fill_parent"
             android:layout_height="1dp"
-            android:background="#ffffff" />
+            android:background="#0c3c00" />
         <View
             android:layout_width="match_parent"
             android:layout_marginTop="10dp"
@@ -227,6 +266,11 @@
             android:layout_height="30dp"
             android:gravity="center_horizontal"
             android:elevation="6dp"
+            android:shadowColor="@color/text_shadow"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2"
+            android:textColor="#0c3c00"
             android:textAppearance="@android:style/TextAppearance.WindowTitle"
             android:text="LogOut"
             android:id="@+id/navigation_drawer_logoutButton"/>

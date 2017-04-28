@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.prashantpandey.nurseryapp">
+
+
+    <application
+        android:name="android.support.multidex.MultiDexApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.prashantpandey.nurseryapp.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.SEARCH" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.prashantpandey.nurseryapp.LoginActivity" />
+        <activity android:name="com.prashantpandey.nurseryapp.CartActivity" />
+        <activity android:name="com.prashantpandey.nurseryapp.IndividualPlantActivity" />
+        <activity android:name="com.prashantpandey.nurseryapp.CheckOutActivity" />
+        <activity
+            android:name="com.prashantpandey.nurseryapp.ProfileActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name="com.prashantpandey.nurseryapp.AddPlants" />
+        <activity android:name="com.soundcloud.android.crop.CropImageActivity" />
+        <activity android:name="com.prashantpandey.nurseryapp.AddPots" />
+        <activity android:name="com.prashantpandey.nurseryapp.IndividualPotActivity" />
+        <activity android:name="com.prashantpandey.nurseryapp.OrderVendor" />
+        <activity android:name="com.prashantpandey.nurseryapp.UserOrderActivity" />
+        <activity android:name="com.prashantpandey.nurseryapp.IndividualExtraActivity" />
+        <activity
+            android:name="com.prashantpandey.nurseryapp.RegisterActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name="com.prashantpandey.nurseryapp.SignInActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:label="@string/app_name" />
+        <activity android:name="com.prashantpandey.nurseryapp.HelpActivity"></activity>
+    </application>
+
+</manifest>

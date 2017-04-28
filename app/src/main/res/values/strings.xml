@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">PlantsHome</string>
+    <string name="title_activity_user_order">UserOrderActivity</string>
+    <string name="facebook_app_id">1842657046005670</string>
+</resources>

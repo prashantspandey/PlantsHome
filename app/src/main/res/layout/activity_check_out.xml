@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_check_out"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.prashantpandey.nurseryapp.CheckOutActivity">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total :"
+        android:textSize="25sp"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:id="@+id/activity_check_out_totaltext"
+        android:layout_marginBottom="10dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Address:"
+        android:layout_below="@id/activity_check_out_totaltext"
+        android:padding="10dp"
+        android:textSize="15dp"
+        android:textColor="#f6a2a2"
+        android:id="@+id/activity_check_out_addressText"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_below="@id/activity_check_out_addressText"
+        android:text="Change Address"
+        android:layout_marginTop="5dp"
+        android:padding="10dp"
+        android:id="@+id/activity_check_out_changeAddressButton"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Payment type "
+        android:layout_below="@id/activity_check_out_changeAddressButton"
+        android:layout_marginTop="15dp"
+        android:padding="10dp"
+        android:id="@+id/activity_check_out_paymentText"/>
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/activity_check_out_paymentText"
+        android:layout_below="@id/activity_check_out_changeAddressButton"
+        android:padding="10dp">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Paytm/Cash On Delivery"
+            android:layout_marginTop="5dp"
+            android:id="@+id/activity_check_out_cashondeliveryradbutt"
+            android:checked="true"/>
+
+
+
+    </RadioGroup>
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/activity_check_out_paymentText"
+        android:layout_marginTop="5dp"
+        android:id="@+id/activity_check_out_recyclerView"
+
+        android:background="#201b1b"
+        android:scrollbars="horizontal"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Scroll"
+        android:layout_below="@id/activity_check_out_recyclerView"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/scrol"/>
+
+
+
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Buy"
+        android:layout_below="@id/scrol"
+        android:layout_marginTop="10dp"
+        android:padding="15dp"
+        android:id="@+id/activity_check_out_buyButton"/>
+
+</RelativeLayout>

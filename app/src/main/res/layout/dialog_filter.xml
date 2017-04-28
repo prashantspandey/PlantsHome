@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    >
+
+
+    <CheckBox
+        android:text="Size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dialog_check_size"
+        android:checked="false"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/dialog_size_radiobuttons"
+        android:visibility="gone"
+        android:layout_marginTop="26dp"
+        android:layout_below="@+id/dialog_check_size"
+        android:weightSum="1">
+        <RadioButton
+            android:text="0-1.5 feet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dialog_radioSmall"
+            android:layout_below="@+id/dialog_title"
+            android:layout_toEndOf="@+id/dialog_check_size"
+
+            />
+
+        <RadioButton
+            android:text="1.5 - 3 feet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dialog_title"
+            android:layout_toEndOf="@+id/radioButton2"
+            android:id="@+id/dialog_radioMedium" />
+
+        <RadioButton
+            android:text="3 - 5 feet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/radioButton3"
+            android:layout_toEndOf="@+id/radioButton3"
+            android:id="@+id/dialog_raidoLarge"
+             />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5-8 feet"
+            android:id="@+id/dialog_radioXlarge"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8-10 feet"
+            android:id="@+id/dialog_radioXXlarge"/>
+    </RadioGroup>
+
+</RelativeLayout>

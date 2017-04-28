@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_add_pots"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.prashantpandey.nurseryapp.AddPots">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageButton
+                android:layout_width="200dp"
+                android:layout_height="120dp"
+                android:src="@mipmap/ic_add_a_photo_white_48dp"
+                android:id="@+id/activity_add_pots_imageButton"/>
+
+           <RadioGroup
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/activity_add_pots_typeRadioGroup"
+               android:orientation="horizontal"
+               android:layout_below="@id/activity_add_pots_imageButton"
+               android:layout_marginTop="10dp">
+               <RadioButton
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Earthen"
+                   android:padding="10dp"
+
+                   android:id="@+id/activity_add_pots_earthenRadio"/>
+               <RadioButton
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Cement"
+                   android:padding="10dp"
+                   android:id="@+id/activity_add_pots_cementRadio"/>
+               <RadioButton
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Plastic"
+                   android:padding="10dp"
+                   android:id="@+id/activity_add_pots_plasticRadio"/>
+
+           </RadioGroup>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6 Inch"
+                android:layout_marginTop="10dp"
+                android:id="@+id/activity_add_pots_6inchCheck"
+                android:padding="5dp"
+                android:layout_below="@id/activity_add_pots_typeRadioGroup"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8 Inch"
+                android:padding="5dp"
+                android:layout_below="@id/activity_add_pots_6inchCheck"
+                android:id="@+id/activity_add_pots_8inchCheck"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9 Inch"
+                android:padding="5dp"
+                android:layout_below="@id/activity_add_pots_8inchCheck"
+                android:id="@+id/activity_add_pots_9inchCheck"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10 Inch"
+                android:padding="5dp"
+                android:layout_below="@id/activity_add_pots_9inchCheck"
+                android:id="@+id/activity_add_pots_10inchCheck"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12 Inch"
+                android:padding="5dp"
+                android:layout_below="@id/activity_add_pots_10inchCheck"
+                android:id="@+id/activity_add_pots_12inchCheck"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="14 Inch"
+                android:layout_below="@id/activity_add_pots_12inchCheck"
+                android:padding="5dp"
+                android:id="@+id/activity_add_pots_14inchCheck"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="16 Inch"
+                android:layout_below="@id/activity_add_pots_14inchCheck"
+                android:padding="5dp"
+                android:id="@+id/activity_add_pots_16inchCheck"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="18 Inch"
+                android:layout_below="@id/activity_add_pots_16inchCheck"
+                android:padding="5dp"
+                android:id="@+id/activity_add_pots_18inchCheck"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20 Inch"
+                android:padding="5dp"
+                android:layout_below="@id/activity_add_pots_18inchCheck"
+                android:id="@+id/activity_add_pots_20inchCheck"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="6 Inch Price"
+                android:layout_below="@id/activity_add_pots_typeRadioGroup"
+                android:layout_toEndOf="@id/activity_add_pots_6inchCheck"
+                android:layout_marginLeft="50dp"
+                android:padding="5dp"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:id="@+id/activity_add_pots_6inchPrice"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="8 Inch Price"
+                android:layout_below="@id/activity_add_pots_6inchPrice"
+                android:layout_toEndOf="@id/activity_add_pots_6inchCheck"
+                android:layout_marginLeft="50dp"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:id="@+id/activity_add_pots_8inchPrice"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="9 Inch Price"
+                android:layout_below="@id/activity_add_pots_8inchPrice"
+                android:layout_toEndOf="@id/activity_add_pots_6inchCheck"
+                android:layout_marginLeft="50dp"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:id="@+id/activity_add_pots_9inchPrice"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="10 Inch Price"
+                android:layout_below="@id/activity_add_pots_9inchPrice"
+                android:layout_toEndOf="@id/activity_add_pots_6inchCheck"
+                android:layout_marginLeft="50dp"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:id="@+id/activity_add_pots_10inchPrice"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="12 Inch Price"
+                android:layout_below="@id/activity_add_pots_10inchPrice"
+                android:layout_toEndOf="@id/activity_add_pots_6inchCheck"
+                android:layout_marginLeft="50dp"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:id="@+id/activity_add_pots_12inchPrice"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="14 Inch Price"
+                android:layout_below="@id/activity_add_pots_12inchPrice"
+                android:layout_toEndOf="@id/activity_add_pots_6inchCheck"
+                android:layout_marginLeft="50dp"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:id="@+id/activity_add_pots_14inchPrice"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="16 Inch Price"
+                android:layout_below="@id/activity_add_pots_14inchPrice"
+                android:layout_toEndOf="@id/activity_add_pots_6inchCheck"
+                android:layout_marginLeft="50dp"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:id="@+id/activity_add_pots_16inchPrice"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="18 Inch Price"
+                android:layout_below="@id/activity_add_pots_16inchPrice"
+                android:layout_toEndOf="@id/activity_add_pots_6inchCheck"
+                android:layout_marginLeft="50dp"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:id="@+id/activity_add_pots_18inchPrice"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="20 Inch Price"
+                android:layout_below="@id/activity_add_pots_18inchPrice"
+                android:layout_toEndOf="@id/activity_add_pots_6inchCheck"
+                android:layout_marginLeft="50dp"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:id="@+id/activity_add_pots_20inchPrice"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/activity_add_pots_20inchCheck"
+                android:layout_marginTop="10dp"
+                android:text="Add Pot to Database"
+                android:id="@+id/activity_add_pots_addtodatabase"/>
+
+
+
+
+
+
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

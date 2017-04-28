@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/potview_imageview"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Type:"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:id="@+id/potview_typeView"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sizes available in :"
+        android:padding="10dp"
+        android:textSize="17sp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/potview_sizeView"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Basic Price : "
+        android:layout_marginStart="12dp"
+        android:textSize="17sp"
+        android:id="@+id/potview_priceview"
+        android:layout_marginTop="10dp"/>
+
+</LinearLayout>

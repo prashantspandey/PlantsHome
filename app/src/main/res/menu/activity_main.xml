@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/main_menu_add"
+        app:showAsAction="never"
+        android:title="Add Plant" />
+    <item android:id="@+id/main_menu_logout"
+        app:showAsAction="never"
+        android:title="Logout" />
+    <item  android:id="@+id/main_menu_search"
+        app:showAsAction="always"
+        android:title="Search"
+        android:icon="@mipmap/ic_search_black_24dp"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        />
+
+    <item android:id="@+id/main_menu_cart"
+        app:showAsAction="always"
+        android:title="Cart"
+        android:icon="@mipmap/ic_shopping_cart_black_24dp" />
+
+    <item android:id="@+id/main_menu_filter"
+        android:title="Filter By.."
+        app:showAsAction="always"
+        android:icon="@mipmap/ic_filter_list_black_24dp"/>
+    <item android:id="@+id/main_menu_removeFilter"
+        app:showAsAction="never"
+        android:title="Remove Filter" />
+    <item android:id="@+id/main_menu_addpot"
+        app:showAsAction="never"
+        android:title="Add Pot" />
+    <item android:id="@+id/main_menu_addExtra"
+        app:showAsAction= "never"
+        android:title="Add Extra" />
+    <item android:id="@+id/main_menu_Orders"
+        android:title="Orders"
+        app:showAsAction="never" />
+
+
+</menu>

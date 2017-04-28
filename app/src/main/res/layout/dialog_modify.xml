@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:padding="5dp">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete Item"
+        android:id="@+id/dialog_modify_deleteButton"
+        android:padding="5dp"
+
+        android:layout_marginTop="22dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_keyboard_arrow_right_white_24dp"
+        android:layout_marginLeft="5dp"
+        android:id="@+id/dialog_modify_increaseQuantity"
+        android:layout_alignTop="@+id/dialog_modify_reduceQuantity"
+        android:layout_toEndOf="@+id/dialog_modify_deleteButton"
+        android:layout_alignBottom="@+id/dialog_modify_reduceQuantity" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dialog_modify_changeQuantityText"
+        android:text=""
+        android:gravity="center"
+        android:layout_alignBottom="@+id/dialog_modify_increaseQuantity"
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@+id/dialog_modify_reduceQuantity" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_keyboard_arrow_left_white_24dp"
+        android:id="@+id/dialog_modify_reduceQuantity"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="57dp"
+        android:layout_below="@+id/dialog_modify_deleteButton"
+        android:layout_toStartOf="@+id/dialog_modify_deleteButton" />
+
+    <TextView
+        android:text="Change Quantity:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/dialog_modify_changeQuantityText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="18dp"
+        android:id="@+id/textView" />
+
+</RelativeLayout>
